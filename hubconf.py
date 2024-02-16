@@ -155,7 +155,7 @@ if __name__ == "__main__":
 
     # Model
     # model = _create(name=opt.model, pretrained=True, channels=3, classes=80, autoshape=True, verbose=True)
-    model = custom(path='fasterrcnn_model_drinks_Epoch9.pt')  # custom
+    model = custom(path=opt.model)  # custom
 
     # Images
     imgs = [
