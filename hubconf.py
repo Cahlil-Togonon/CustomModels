@@ -2,9 +2,7 @@ def custom(path="fasterrcnn_model_drinks_Epoch9.pt", autoshape=True, _verbose=Tr
     import torch
     import torchvision
     from pathlib import Path
-    import os
-    print(os.getcwd())
-    print(os.listdir())
+
     model = torchvision.models.detection.fasterrcnn_resnet50_fpn()
     model.names = ["drinks"]
     num_classes = 4             # 3 drinks + background
@@ -15,4 +13,5 @@ def custom(path="fasterrcnn_model_drinks_Epoch9.pt", autoshape=True, _verbose=Tr
 
     checkpoint = torch.load(model_path)
     model.load_state_dict(checkpoint['model_state_dict'])
+    model.eval()
     return model.to(device)
