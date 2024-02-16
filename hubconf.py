@@ -6,7 +6,7 @@ def custom(path="fasterrcnn_model_drinks_Epoch9.pt", autoshape=True, _verbose=Tr
     print(os.getcwd())
     print(os.listdir())
     model = torchvision.models.detection.fasterrcnn_resnet50_fpn()
-    model.name = "fasterrcnn"
+    model.names = "fasterrcnn"
     num_classes = 4             # 3 drinks + background
     in_features = model.roi_heads.box_predictor.cls_score.in_features
     model.roi_heads.box_predictor = torchvision.models.detection.faster_rcnn.FastRCNNPredictor(in_features, num_classes)
