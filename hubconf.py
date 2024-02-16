@@ -1,4 +1,4 @@
-def custom(path="/fasterrcnn_model_drinks_Epoch9.pt", autoshape=True, _verbose=True, device=None):
+def custom(path="/CustomModels/fasterrcnn_model_drinks_Epoch9.pt", autoshape=True, _verbose=True, device=None):
     import torch
     import torchvision
     from pathlib import Path
