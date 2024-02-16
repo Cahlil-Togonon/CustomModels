@@ -83,7 +83,7 @@ def _create(name, pretrained=True, channels=3, classes=80, autoshape=True, verbo
         raise Exception(s) from e
 
 
-def custom(path="fasterrcnn_model_drinks_Epoch9.pt", autoshape=True, _verbose=True, device=None):
+def custom(path="CustomModels/fasterrcnn_model_drinks_Epoch9.pt", autoshape=True, _verbose=True, device=None):
     import torchvision
     model = torchvision.models.detection.fasterrcnn_resnet50_fpn()
     num_classes = 4             # 3 drinks + background
